@@ -1,29 +1,19 @@
-// Obtener referencias a los elementos del DOM
-const counterDisplay = document.getElementById('counter-display');
-const incrementButton = document.getElementById('increment-btn');
-const decrementButton = document.getElementById('decrement-btn');
-const resetButton = document.getElementById('reset-btn');
-
 // Inicializar el contador
 let counter = 0;
 
-// Funciones para los botones
-incrementButton.addEventListener('click', () => {
-  counter++;
-  updateDisplay();
-});
+// Obtener el display del contador
+const counterDisplay = document.getElementById('counter-display');
 
-decrementButton.addEventListener('click', () => {
-  counter--;
-  updateDisplay();
-});
-
-resetButton.addEventListener('click', () => {
-  counter = 0;
-  updateDisplay();
+// Agregar evento a todas las imágenes
+const images = document.querySelectorAll('.collage img');
+images.forEach((img) => {
+  img.addEventListener('click', () => {
+    counter++;
+    updateDisplay();
+  });
 });
 
 // Actualizar la visualización del contador
 function updateDisplay() {
-  counterDisplay.textContent = counter;
+  counterDisplay.textContent = `Clicks totales: ${counter}`;
 }

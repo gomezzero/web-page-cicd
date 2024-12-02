@@ -1,63 +1,53 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .counter-container {
-    text-align: center;
-    background: #fff;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  #counter-display {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 20px 0;
-    color: #007acc;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #increment-btn {
-    background-color: #4caf50;
-    color: white;
-  }
-  
-  #decrement-btn {
-    background-color: #f44336;
-    color: white;
-  }
-  
-  #reset-btn {
-    background-color: #2196f3;
-    color: white;
-  }
-  
-  button:hover {
-    opacity: 0.9;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #181818;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  margin-top: 20px;
+  max-width: 80%;
+}
+
+h1 {
+  color: #d4af37;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+#counter-display {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #4caf50;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.collage img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collage img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
