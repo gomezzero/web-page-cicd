@@ -1,19 +1,22 @@
-// Inicializar el contador
-let counter = 0;
+// Array de frases del Grinch
+const grinchQuotes = [
+  "Tal vez la Navidad no viene de una tienda.",
+  "¡Odio a toda la gente feliz allá afuera!",
+  "Soy un genio. ¡Soy un genio amargado!",
+  "¡Espera, no puedes esperar a odiar algo antes de probarlo primero!",
+  "¿Un corazón dos tallas más pequeño? ¡Perfecto para mí!"
+];
 
-// Obtener el display del contador
-const counterDisplay = document.getElementById('counter-display');
-
-// Agregar evento a todas las imágenes
-const images = document.querySelectorAll('.collage img');
-images.forEach((img) => {
-  img.addEventListener('click', () => {
-    counter++;
-    updateDisplay();
-  });
+// Función para mostrar frases aleatorias
+const quoteDisplay = document.getElementById("quote-display");
+const quoteBtn = document.getElementById("quote-btn");
+quoteBtn.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * grinchQuotes.length);
+  quoteDisplay.textContent = grinchQuotes[randomIndex];
 });
 
-// Actualizar la visualización del contador
-function updateDisplay() {
-  counterDisplay.textContent = `Clicks totales: ${counter}`;
-}
+// Botón interactivo "Roba la Navidad"
+const actionBtn = document.getElementById("action-btn");
+actionBtn.addEventListener("click", () => {
+  alert("¡Felicidades, has robado la Navidad! 🎄❌");
+});

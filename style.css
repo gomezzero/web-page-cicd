@@ -1,53 +1,93 @@
+/* General */
 body {
   font-family: Arial, sans-serif;
-  background-color: #9a0b0b;
-  color: #fff;
   margin: 0;
   padding: 0;
+  background-color: #1e1e1e;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
-.container {
-  text-align: center;
-  margin-top: 20px;
-  max-width: 80%;
-}
-
-h1 {
-  color: #d4af37;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-p {
-  color: #ccc;
-  font-size: 1.2rem;
-}
-
-#counter-display {
-  font-size: 1.5rem;
-  margin: 20px 0;
-  color: #4caf50;
-}
-
-.collage {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-}
-
-.collage img {
+/* Header */
+header {
+  background-color: #50c878; /* Verde estilo Grinch */
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  text-align: center;
+  padding: 20px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.collage img:hover {
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin: 5px 0 0;
+  color: #333333;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.grinch-spotlight {
+  margin-bottom: 30px;
+}
+
+.grinch-spotlight img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #50c878;
+  border: none;
+  border-radius: 5px;
+  color: #1e1e1e;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.quotes {
+  margin-top: 30px;
+}
+
+#quote-display {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  background-color: #333333;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #50c878;
 }
